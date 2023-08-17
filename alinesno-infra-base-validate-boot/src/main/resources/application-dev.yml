@@ -1,0 +1,10 @@
+server:
+  port: 30108
+
+# spring 配置
+spring:
+  application:
+    name: alinesno-infra-base-validate-boot
+  devtools:
+    restart:
+      enabled: true
