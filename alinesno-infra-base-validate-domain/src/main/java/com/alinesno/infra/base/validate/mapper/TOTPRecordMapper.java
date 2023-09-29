@@ -7,6 +7,5 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * TOTP验证记录数据访问接口
  */
-@Mapper
 public interface TOTPRecordMapper extends IBaseMapper<TOTPRecordEntity> {
 }
