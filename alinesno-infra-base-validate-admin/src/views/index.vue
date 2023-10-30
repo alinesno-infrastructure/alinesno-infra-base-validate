@@ -14,14 +14,14 @@
                 <span><i class="el-icon-monitor"></i>
                   {{ currentEnvClusterObj.clusterName }}
                 </span>
-                <span>
+                <!-- <span>
                   <i class="el-icon-link"></i> 
                   应用地址: {{ currentEnvClusterObj.apiServerUrl }}
-                </span>
+                </span> -->
               </div>
             </div>
             <div class="title-desc">
-              集群状态展示集群资源的概览和详情，您可以查看集群资源的监控数据和用量排行情况。
+                  {{ currentEnvClusterObj.desc }}
             </div>
           </div>
         </div>
@@ -51,8 +51,9 @@ import OperationWorkspaceService from './operation-workspace/service.vue'
 
 const currentEnvClusterObj = ref({
   appName : '安全验证码服务'  , 
-  clusterName: 'minio/oss/nfs等多存储集成'  , 
-  apiServerUrl: 'http://portal.infra.linesno.com'
+  clusterName: '图形验证码/OTLP验证/验证码等安全验证'  , 
+  apiServerUrl: 'http://portal.infra.linesno.com',
+  desc:'常见的安全验证机制，旨在区分人类用户和机器人或恶意程序',
 }) 
 
 </script>

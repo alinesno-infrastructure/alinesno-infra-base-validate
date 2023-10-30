@@ -1,18 +1,8 @@
 package com.alinesno.infra.base.validate.service.impl;
 
 import com.alinesno.infra.base.validate.api.dto.CaptchaResponse;
-import com.alinesno.infra.base.validate.entity.CaptchaRecordEntity;
-import com.alinesno.infra.base.validate.mapper.CaptchaMapper;
 import com.alinesno.infra.base.validate.service.ICaptchaService;
-import com.google.code.kaptcha.Producer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
-import java.awt.image.BufferedImage;
-import java.util.Date;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 这是一个验证码服务实现类

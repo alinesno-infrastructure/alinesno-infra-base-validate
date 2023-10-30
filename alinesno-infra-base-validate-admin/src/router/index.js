@@ -60,18 +60,39 @@ export const constantRoutes = [
         meta: { title: '首页', icon: 'dashboard', affix: true }
       },
 
-      // {
-      //   path: '/dashboard/smartService',
-      //   component: () => import('@/views/smartService'),
-      //   name: '/dashboard/smartService',
-      //   meta: { title: '智能客服', icon: 'dashboard', affix: true }
-      // },
-      // {
-      //   path: '/dashboard/serviceList',
-      //   component: () => import('@/views/serviceList'),
-      //   name: '/dashboard/serviceList',
-      //   meta: { title: '服务列表', icon: 'dashboard', affix: true }
-      // },
+      // >>>>>>>>>>>>>>>>>>>>> 项目路径配置_start >>>>>>>>>>>>>>>>.
+      {
+        path: '/validate/app/index',
+        component: () => import('@/views/validate/app/index'),
+        name: '/validate/app/index',
+        meta: { title: '应用管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/validate/api/index',
+        component: () => import('@/views/validate/api/index'),
+        name: '/validate/api/index',
+        meta: { title: '接口调用', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/validate/config/index',
+        component: () => import('@/views/validate/config/index'),
+        name: '/validate/config/index',
+        meta: { title: '认证配置', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/validate/rule/index',
+        component: () => import('@/views/validate/rule/index'),
+        name: '/validate/rule/index',
+        meta: { title: '规则配置', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/validate/names/index',
+        component: () => import('@/views/validate/names/index'),
+        name: '/validate/names/index',
+        meta: { title: '黑白名单', icon: 'dashboard', affix: true }
+      },
+      // >>>>>>>>>>>>>>>>>>>>> 项目路径配置_end >>>>>>>>>>>>>>>>.
+
       {
         path: '/dashboard/suportTechnique',
         component: () => import('@/views/suportTechnique'),

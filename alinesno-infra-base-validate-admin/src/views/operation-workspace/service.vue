@@ -57,7 +57,7 @@
       <el-col :span="5">
         <div class="grid-content">
           <div class="panel-header">
-            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 接口调用统计</div>
+            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 应用调用概览</div>
           </div>
           <div class="panel-body acp-height-auto">
             <ul class="panel-item-text">
@@ -84,41 +84,33 @@ import * as echarts from "echarts";
 const echart = echarts;
 
 const opertionAssets = ref([
-  {id:'1' , title:'运维脚本' , count:45} ,
-  {id:'2' , title:'服务资源' , count:145} ,
-  {id:'3' , title:'持续集成' , count:65} ,
-  {id:'4' , title:'自动配置' , count:85} ,
-  {id:'5' , title:'配置管理' , count:45} ,
-  {id:'6' , title:'安全监控' , count:45} ,
+  {id:'1' , title:'接入应用' , count:45} ,
+  {id:'2' , title:'调用次数' , count:145} ,
+  {id:'3' , title:'验证成功' , count:65} ,
+  {id:'4' , title:'验证异常' , count:85} ,
+  {id:'5' , title:'安全异常' , count:45} ,
 ])
 
 const resources = ref([
         {
           icon: "fas fa-microchip",
-          title: "CPU core",
+          title: "验证码调用",
           total: "4",
           usage: "0.64",
           usagePre: "12%",
         },
         {
           icon: "fas fa-memory",
-          title: "内存 Gi",
+          title: "OTLP调用",
           total: "7.68",
           usage: "4.81",
           usagePre: "12%",
         },
         {
           icon: "fas fa-hdd",
-          title: "磁盘 GB",
+          title: "图形验证码调用",
           total: "21.57",
           usage: "207.71",
-          usagePre: "12%",
-        },
-        {
-          icon: "fab fa-docker",
-          title: "容器组",
-          total: "220",
-          usage: "28",
           usagePre: "12%",
         },
       ]) ; 
@@ -140,13 +132,13 @@ function drawBar2() {
 
       var lineOption = {
         title: {
-          text: "请求延迟(ms)",
+          text: "调用次数",
         },
         tooltip: {
           trigger: "axis",
         },
         legend: {
-          data: ["访问流量", "访问IP"],
+          data: ["调用成功", "调用异常"],
         },
         grid: {
           x: 40,
@@ -284,7 +276,7 @@ function drawBar2() {
         ],
         series: [
           {
-            name: "访问流量",
+            name: "调用成功",
             type: "line",
             smooth: true,
             data: [
@@ -308,7 +300,7 @@ function drawBar2() {
             },
           },
           {
-            name: "访问IP",
+            name: "调用异常",
             type: "line",
             smooth: true,
             data: [
