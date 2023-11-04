@@ -1,5 +1,8 @@
 package com.alinesno.infra.base.validate.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -48,6 +51,7 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
  * @version 1.0.0
  */
 @TableName("blacklist")
+@Data
 public class BlacklistEntity extends InfraBaseEntity {
 
     /**
@@ -55,6 +59,8 @@ public class BlacklistEntity extends InfraBaseEntity {
      */
     @Excel(name = "IP限制")
     @TableField("ip")
+	@ColumnType(length=15)
+	@ColumnComment("IP限制")
     private String ip;
     
     /**
@@ -62,6 +68,8 @@ public class BlacklistEntity extends InfraBaseEntity {
      */
     @Excel(name = "备注")
     @TableField("remark")
+	@ColumnType(length=255)
+	@ColumnComment("备注")
     private String remark;
 
     /**
@@ -69,31 +77,7 @@ public class BlacklistEntity extends InfraBaseEntity {
      */
     @Excel(name = "应用代码")
     @TableField("app_code")
+	@ColumnType(length=50)
+	@ColumnComment("应用代码")
     private String appCode;
-
-    // getter and setter methods
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public String getAppCode() {
-        return appCode;
-    }
-
-    public void setAppCode(String appCode) {
-        this.appCode = appCode;
-    }
 }
