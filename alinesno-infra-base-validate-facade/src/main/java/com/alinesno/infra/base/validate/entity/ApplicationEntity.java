@@ -1,9 +1,12 @@
 package com.alinesno.infra.base.validate.entity;
 
-import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import cn.afterturn.easypoi.excel.annotation.Excel;
 
 /**
  * 数据表：application
@@ -50,6 +53,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * @version 1.0.0
  */
 @TableName("application")
+@Data
 public class ApplicationEntity extends InfraBaseEntity {
 
     /**
@@ -57,6 +61,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "名称")
     @TableField("name")
+	@ColumnType(length=255)
+	@ColumnComment("名称")
     private String name;
     
     /**
@@ -64,6 +70,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "应用编码")
     @TableField("application_code")
+	@ColumnType(length=50)
+	@ColumnComment("应用编码")
     private String applicationCode;
     
     /**
@@ -71,6 +79,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "最大文件大小")
     @TableField("max_file_size")
+	@ColumnType(length=4)
+	@ColumnComment("最大文件大小")
     private Long maxFileSize;
     
     /**
@@ -78,6 +88,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "文件类型")
     @TableField("file_type")
+	@ColumnType(length=20)
+	@ColumnComment("文件类型")
     private String fileType;
     
     /**
@@ -85,6 +97,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "API密钥")
     @TableField("api_key")
+	@ColumnType(length=32)
+	@ColumnComment("API密钥")
     private String apiKey;
     
     /**
@@ -92,6 +106,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "最大上传次数")
     @TableField("max_upload_count")
+	@ColumnType(length=255)
+	@ColumnComment("最大上传次数")
     private Long maxUploadCount;
     
     /**
@@ -99,6 +115,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "最大下载次数")
     @TableField("max_download_count")
+	@ColumnType(length=10)
+	@ColumnComment("最大下载次数")
     private Long maxDownloadCount;
     
     /**
@@ -106,6 +124,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "公司名称")
     @TableField("company_name")
+	@ColumnType(length=50)
+	@ColumnComment("公司名称")
     private String companyName;
     
     /**
@@ -113,6 +133,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "渠道IDs")
     @TableField("channel_ids")
+	@ColumnType(length=255)
+	@ColumnComment("渠道IDs")
     private String channelIds;
     
     /**
@@ -120,6 +142,8 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "应用编码")
     @TableField("app_code")
+	@ColumnType(length=50)
+	@ColumnComment("应用编码")
     private String appCode;
     
     /**
@@ -127,109 +151,15 @@ public class ApplicationEntity extends InfraBaseEntity {
      */
     @Excel(name = "请求次数")
     @TableField("request_count")
+	@ColumnType(length=10)
+	@ColumnComment("请求次数")
     private int requestCount;
     
     /**
      * 验证次数
      */
     @TableField("validate_count")
+	@ColumnType(length=2)
+	@ColumnComment("验证次数")
     private int validateCount;
-    
-    // getter and setter methods
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getApplicationCode() {
-        return applicationCode;
-    }
-
-    public void setApplicationCode(String applicationCode) {
-        this.applicationCode = applicationCode;
-    }
-
-    public Long getMaxFileSize() {
-        return maxFileSize;
-    }
-
-    public void setMaxFileSize(Long maxFileSize) {
-        this.maxFileSize = maxFileSize;
-    }
-
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
-
-    public String getApiKey() {
-        return apiKey;
-    }
-
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
-    }
-
-    public Long getMaxUploadCount() {
-        return maxUploadCount;
-    }
-
-    public void setMaxUploadCount(Long maxUploadCount) {
-        this.maxUploadCount = maxUploadCount;
-    }
-
-    public Long getMaxDownloadCount() {
-        return maxDownloadCount;
-    }
-
-    public void setMaxDownloadCount(Long maxDownloadCount) {
-        this.maxDownloadCount = maxDownloadCount;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getChannelIds() {
-        return channelIds;
-    }
-
-    public void setChannelIds(String channelIds) {
-        this.channelIds = channelIds;
-    }
-
-    public String getAppCode() {
-        return appCode;
-    }
-
-    public void setAppCode(String appCode) {
-        this.appCode = appCode;
-    }
-
-    public int getRequestCount() {
-        return requestCount;
-    }
-
-    public void setRequestCount(int requestCount) {
-        this.requestCount = requestCount;
-    }
-
-    public int getValidateCount() {
-        return validateCount;
-    }
-
-    public void setValidateCount(int validateCount) {
-        this.validateCount = validateCount;
-    }
 }
