@@ -1,9 +1,11 @@
 package com.alinesno.infra.base.validate.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.alinesno.infra.common.facade.mapper.entity.BaseEntity;
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.time.LocalDateTime;
 
 /**
@@ -13,11 +15,11 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  */
 @TableName("otp_login_record")
-public class OtpLoginRecordEntity {
+public class OtpLoginRecordEntity extends BaseEntity {
     /**
      * 用户ID（User ID）：关联到用户表中的用户ID。
      */
-    @TableId(value = "user_id", type = IdType.AUTO)
+    @TableField(value = "user_id")
     private Long userId;
 
     /**

@@ -1,10 +1,10 @@
 package com.alinesno.infra.base.validate.entity;
 
-import java.util.Date;
-
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.util.Date;
 
 /**
  * 功能名：【请填写功能名称】

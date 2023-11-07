@@ -1,9 +1,9 @@
 package com.alinesno.infra.base.validate.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import cn.afterturn.easypoi.excel.annotation.Excel;
 
 /**
  * 数据表：application
