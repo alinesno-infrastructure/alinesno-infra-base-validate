@@ -7,11 +7,12 @@ import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import cn.afterturn.easypoi.excel.annotation.Excel;
+import lombok.EqualsAndHashCode;
 
 /**
  * 数据表：application
  *
- * ApplicationEntity 实体类
+ * ProjectEntity 实体类
  * 
  * <p>字段注释：</p>
  * <ul>
@@ -52,9 +53,10 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
  * @author luoxiaodong
  * @version 1.0.0
  */
-@TableName("application")
+@EqualsAndHashCode(callSuper = true)
+@TableName("project")
 @Data
-public class ApplicationEntity extends InfraBaseEntity {
+public class ProjectEntity extends InfraBaseEntity {
 
     /**
      * 名称

@@ -1,7 +1,7 @@
 package com.alinesno.infra.base.validate.api.controller;
 
-import com.alinesno.infra.base.validate.entity.ApplicationEntity;
-import com.alinesno.infra.base.validate.service.IApplicationService;
+import com.alinesno.infra.base.validate.entity.ProjectEntity;
+import com.alinesno.infra.base.validate.service.IProjectService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -28,10 +28,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
 @RequestMapping("/api/infra/base/validate/application")
-public class ApplicationController extends BaseController<ApplicationEntity, IApplicationService> {
+public class ProjectController extends BaseController<ProjectEntity, IProjectService> {
 
     @Autowired
-    private IApplicationService service;
+    private IProjectService service;
 
     /**
      * 获取BusinessLogEntity的DataTables数据。
@@ -49,7 +49,7 @@ public class ApplicationController extends BaseController<ApplicationEntity, IAp
     }
 
     @Override
-    public IApplicationService getFeign() {
+    public IProjectService getFeign() {
         return this.service;
     }
 }

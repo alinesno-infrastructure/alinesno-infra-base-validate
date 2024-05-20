@@ -4,4 +4,4 @@
 
 ## 鸣谢
 
-- [AJ-Captcha](https://gitee.com/anji-plus/captcha)框架和代码
+- [AJ-Captcha](https://gitee.com/anji-plus/captcha)框架和代码，此项目集成部分AJ-Captcha项目代码
